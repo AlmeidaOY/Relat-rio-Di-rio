@@ -1,0 +1,120 @@
+/* Base Neumorphic Styles */
+.neumorphic-inset {
+  background: linear-gradient(145deg, rgba(25, 55, 125, 0.7), rgba(35, 65, 135, 0.4));
+  box-shadow: inset 2px 2px 5px rgba(10, 30, 80, 0.5), inset -2px -2px 5px rgba(70, 120, 190, 0.2);
+}
+
+.neumorphic-outset {
+  background: linear-gradient(145deg, rgba(45, 85, 155, 0.4), rgba(35, 65, 135, 0.2));
+  box-shadow: 3px 3px 6px rgba(10, 30, 80, 0.5), -3px -3px 6px rgba(70, 120, 190, 0.2);
+  transition: all 0.2s ease;
+}
+
+.neumorphic-outset:active {
+  box-shadow: inset 2px 2px 5px rgba(10, 30, 80, 0.5), inset -2px -2px 5px rgba(70, 120, 190, 0.2);
+}
+
+.neumorphic-card {
+  background: linear-gradient(145deg, rgba(40, 80, 150, 0.4), rgba(30, 60, 130, 0.2));
+  box-shadow: 5px 5px 10px rgba(10, 30, 80, 0.5), -5px -5px 10px rgba(70, 120, 190, 0.2);
+}
+
+.neumorphic-list-item {
+  background: linear-gradient(145deg, rgba(40, 80, 150, 0.3), rgba(30, 60, 130, 0.1));
+  box-shadow: 3px 3px 6px rgba(10, 30, 80, 0.4), -3px -3px 6px rgba(70, 120, 190, 0.1);
+  transition: all 0.2s ease;
+}
+
+.neumorphic-list-item:active {
+  transform: scale(0.98);
+}
+
+.neumorphic-avatar {
+  box-shadow:
+    5px 5px 10px rgba(10, 30, 80, 0.5),
+    -5px -5px 10px rgba(70, 120, 190, 0.2),
+    inset 1px 1px 2px rgba(70, 120, 190, 0.2),
+    inset -1px -1px 2px rgba(10, 30, 80, 0.5);
+}
+
+.neumorphic-avatar-small {
+  box-shadow: 3px 3px 6px rgba(10, 30, 80, 0.5), -3px -3px 6px rgba(70, 120, 190, 0.2);
+}
+
+.neumorphic-button {
+  background: linear-gradient(145deg, rgba(45, 85, 155, 0.4), rgba(35, 65, 135, 0.2));
+  box-shadow: 3px 3px 6px rgba(10, 30, 80, 0.5), -3px -3px 6px rgba(70, 120, 190, 0.2);
+  transition: all 0.2s ease;
+}
+
+.neumorphic-button:active {
+  box-shadow: inset 2px 2px 5px rgba(10, 30, 80, 0.5), inset -2px -2px 5px rgba(70, 120, 190, 0.2);
+  transform: translateY(1px);
+}
+
+.neumorphic-icon-button {
+  background: linear-gradient(145deg, rgba(45, 85, 155, 0.4), rgba(35, 65, 135, 0.2));
+  box-shadow: 2px 2px 5px rgba(10, 30, 80, 0.5), -2px -2px 5px rgba(70, 120, 190, 0.2);
+  transition: all 0.2s ease;
+}
+
+.neumorphic-icon-button:active {
+  box-shadow: inset 1px 1px 3px rgba(10, 30, 80, 0.5), inset -1px -1px 3px rgba(70, 120, 190, 0.2);
+}
+
+.neumorphic-ping {
+  background: linear-gradient(145deg, rgba(45, 85, 155, 0.6), rgba(35, 65, 135, 0.4));
+  box-shadow:
+    4px 4px 8px rgba(10, 30, 80, 0.5),
+    -4px -4px 8px rgba(70, 120, 190, 0.2),
+    inset 1px 1px 2px rgba(70, 120, 190, 0.2),
+    inset -1px -1px 2px rgba(10, 30, 80, 0.5);
+}
+
+.ping-animation {
+  animation: ping 1.5s cubic-bezier(0, 0, 0.2, 1) infinite;
+  background: radial-gradient(circle, rgba(59, 130, 246, 0.5) 0%, rgba(59, 130, 246, 0) 70%);
+}
+
+@keyframes ping {
+  0% {
+    transform: scale(0.8);
+    opacity: 1;
+  }
+  75%,
+  100% {
+    transform: scale(1.5);
+    opacity: 0;
+  }
+}
+
+/* Swipe animations */
+.swipe-right-enter {
+  transform: translateX(-100%);
+}
+.swipe-right-enter-active {
+  transform: translateX(0);
+  transition: transform 300ms ease-in-out;
+}
+.swipe-right-exit {
+  transform: translateX(0);
+}
+.swipe-right-exit-active {
+  transform: translateX(100%);
+  transition: transform 300ms ease-in-out;
+}
+
+.swipe-left-enter {
+  transform: translateX(100%);
+}
+.swipe-left-enter-active {
+  transform: translateX(0);
+  transition: transform 300ms ease-in-out;
+}
+.swipe-left-exit {
+  transform: translateX(0);
+}
+.swipe-left-exit-active {
+  transform: translateX(-100%);
+  transition: transform 300ms ease-in-out;
+}
